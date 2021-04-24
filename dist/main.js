@@ -117,15 +117,16 @@ function createWindow() {
   });
 
   if (true) {
-    mainWindow.loadURL("http://localhost:4000"); //mainWindow.webContents.openDevTools();
+    mainWindow.loadURL('http://localhost:4000');
+    mainWindow.webContents.openDevTools();
   } else {}
 
-  mainWindow.on("closed", function () {
+  mainWindow.on('closed', function () {
     mainWindow = null;
   });
 }
 
-electron__WEBPACK_IMPORTED_MODULE_0__["app"].on("ready", createWindow);
+electron__WEBPACK_IMPORTED_MODULE_0__["app"].on('ready', createWindow);
 electron__WEBPACK_IMPORTED_MODULE_0__["app"].allowRendererProcessReuse = true;
 
 /***/ }),
